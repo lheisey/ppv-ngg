@@ -1,0 +1,14 @@
+// Import justifiedGallery CSS
+// TODO convert justifiedGallery LESS to SCSS
+// To import .css file do not use the extension
+@import "../../../node_modules/justifiedGallery/dist/css/justifiedGallery";
+
+// Custom styles
+
+.justified-gallery > .jg-entry-visible > img:hover,
+.justified-gallery > .jg-entry-visible > a > img:hover,
+.justified-gallery > .jg-entry-visible > img:hover,
+.justified-gallery > .jg-entry-visible > a > img:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}

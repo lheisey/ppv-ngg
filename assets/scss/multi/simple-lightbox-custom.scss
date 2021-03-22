@@ -1,0 +1,22 @@
+// Variable overrides
+$sl-overlay-background: #000;
+$sl-overlay-opacity: 0.8;
+$sl-navigation-color: #fff;
+$sl-caption-color: #000;
+$sl-caption-background: rgba(216, 216, 216, 0.6);
+
+$sl-counter-fontsize: 2rem;
+$sl-arrow-fontsize-large: 4rem;
+
+// Import simplelightbox
+@import "../../../node_modules/simplelightbox/src/simple-lightbox.scss";
+
+// Custom styles
+.sl-wrapper button:hover {
+  color: #aaa9ad;
+  background: rgba(0, 0, 0, 0.1);
+}
+.sl-wrapper button:active {
+  outline: none;
+  box-shadow: none;
+}
