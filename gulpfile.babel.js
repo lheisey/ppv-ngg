@@ -15,6 +15,7 @@
  *      + Watches files for changes in files.
  *      + Corrects the line endings.
  *      + InjectCSS instead of browser page reload.
+ *      + Convert readme.txt to readme.md.
  */
 
 /**
@@ -39,6 +40,9 @@ const mmq = require('gulp-merge-media-queries'); // Combine matching media queri
 const concat = require('gulp-concat'); // Concatenates JS files.
 const uglify = require('gulp-uglify'); // Minifies JS files.
 const babel = require('gulp-babel'); // Compiles ESNext to browser compatible JS.
+
+// Readme conversion plugin
+const convertreadme = require('gulp-readme-to-markdown'); // Convert readme.txt to readme.md.
 
 // Utility related plugins.
 const rename = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css.
@@ -341,6 +345,20 @@ gulp.task('copymisc', () => {
 });
 
 /**
+ * Task: 'readme'.
+ *
+ * Convert WordPress readme.txt to github readme.md
+ */
+gulp.task('readme', (done) => {
+    gulp.src([ config.readmeSRC ])
+        .pipe(convertreadme({
+            details: false
+        }))
+        .pipe(gulp.dest(config.readmeDEST));
+    done();
+});
+
+/**
  * Task: 'package'.
  *
  * Packages all the processed plugin files in a ZIP file.
@@ -362,13 +380,15 @@ gulp.task('package', () => {
  * Watch Tasks.
  *
  * Watches for file changes and runs specific tasks.
+ * Does not watch readme or copyvendorJS.
  */
 gulp.task(
     'default',
-    gulp.parallel('mainstyles', 'multistyles', 'mainJS', 'multiJS', 'copyPHP', 'copymisc', 'copyvendorJS', browsersync, () => {
+    gulp.series( 'readme', gulp.parallel('mainstyles', 'multistyles', 'mainJS', 'multiJS', 'copyPHP', 'copymisc', 'copyvendorJS', browsersync, () => {
         gulp.watch(config.watchPhp, gulp.series('copyPHP', reload)); // Reload on PHP file changes.
         gulp.watch(config.watchMisc, gulp.series('copymisc', reload)); // Reload on miscellaneous file changes.
         gulp.watch(config.watchStyles, gulp.parallel('mainstyles', 'multistyles')); // Reload on SCSS file changes.
         gulp.watch(config.watchJs, gulp.series('mainJS', 'multiJS', reload)); // Reload on JS file changes.
-    })
+
+    }))
 );

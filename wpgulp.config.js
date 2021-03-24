@@ -105,6 +105,12 @@ const vendorJsSRC = [
 // Path to place non-processed vendor JS files.
 const vendorJsDEST = pluginFolder + '/assets/js/';
 
+// Readme text file location.
+const readmeSRC = './README.txt';
+
+// Path of markdown file.
+const readmeDEST = '.';
+
 // >>>>> Watch files paths.
 // Path to all *.scss files inside css folder and inside them.
 const watchStyles = [
@@ -177,6 +183,8 @@ module.exports = {
     phpDEST,
     miscGlob,
     miscDEST,
+    readmeSRC,
+    readmeDEST,
     vendorJsSRC,
     vendorJsDEST,
     watchStyles,
