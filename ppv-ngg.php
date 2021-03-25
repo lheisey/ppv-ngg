@@ -16,7 +16,7 @@
  * Plugin Name:       Picturesque Photo Views NextGEN Addons
  * Plugin URI:        https://github.com/lheisey/ppv-ngg/
  * Description:       Adds album and justified gallery templates for the NextGEN Gallery plugin.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Loren Heisey
  * Author URI:        https://github.com/lheisey/
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PPV_NGG_VERSION', '1.0.0' );
+define( 'PPV_NGG_VERSION', '1.0.1' );
 
 /**
  * Setup plugin constants.

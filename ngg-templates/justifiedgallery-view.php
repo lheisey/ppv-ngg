@@ -1,11 +1,13 @@
 <?php
 $this->start_element('nextgen_gallery.gallery_container', 'container', $displayed_gallery);
+if ($displayed_gallery->source === 'galleries' && !empty($displayed_gallery->container_ids)) {
+	$gallery = C_Gallery_Mapper::get_instance()->find($displayed_gallery->container_ids[0]);}
 ?>
 <!-- default-view.php -->
 <div
 	class="justified-galleryoverview default-view <?php if (!intval($ajax_pagination)) echo ' ngg-ajax-pagination-none'; ?>"
 	id="ngg-gallery-<?php echo esc_attr($displayed_gallery_id)?>-<?php echo esc_attr($current_page)?>">
-    <div class="ppv-justified-return"><a href="<?php the_permalink(); ?>" title="Return to the list of Picture Galleries"> &laquo; Return to the list of Picture Galleries</a></div>
+    <div class="ppv-gallery-title"><?php echo esc_attr($gallery->title)?> Gallery</div>
 	<?php
 
 	$this->start_element('nextgen_gallery.image_list_container', 'container', $images);
@@ -85,5 +87,6 @@ $this->start_element('nextgen_gallery.gallery_container', 'container', $displaye
 	<?php else: ?>
 	<div class="ngg-clear"></div>
 	<?php endif ?>
+    <div class="ppv-justified-return"><a href="<?php the_permalink(); ?>" title="Return to the list of Picture Galleries"> &laquo; Return to the list of Picture Galleries</a></div>
 </div>
 <?php $this->end_element(); ?>

@@ -86,3 +86,4 @@ In the ppv-ngg.php file after the comment block that starts with `Currently plug
 
 ### 1.0.1 ###
 * Add readme.txt to markdown conversion
+* Add gallery title to justified gallery template
