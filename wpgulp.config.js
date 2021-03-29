@@ -74,6 +74,7 @@ const phpDEST = pluginFolder;
 const miscGlob = [
     './**',
     '!./{node_modules,node_modules/**/*}',
+    '!./{dist,dist/**/*}',
     '!./.git',
     '!./.svn',
     '!./gulpfile.babel.js',
