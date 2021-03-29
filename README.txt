@@ -95,3 +95,7 @@ In the ppv-ngg.php file after the comment block that starts with `Currently plug
 = 1.0.1 =
 * Add readme.txt to markdown conversion
 * Add gallery title to justified gallery template
+
+= 1.0.2 =
+* Change to not copy ppv-ngg.zip to plugin directory
+* Change to use minified JS and CSS

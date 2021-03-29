@@ -99,7 +99,7 @@ const miscDEST = pluginFolder;
 
 // Non-processed vendor JS
 const vendorJsSRC = [
-    './node_modules/justifiedGallery/dist/js/jquery.justifiedGallery.js',
+    './node_modules/justifiedGallery/dist/js/*.js',
     './node_modules/simplelightbox/dist/*.js'
 ];
 
