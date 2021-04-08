@@ -12,6 +12,7 @@ Adds two compact album templates, a justified gallery template, and a modified v
 * compact album query template where number of albums displayed in row is determined by media queries
 * justified gallery template which displays gallery images in a justified layout 
 * simplelightbox modified to have dark background for lightbox image
+* justified gallery CSS and JS only loaded on specified pages
 
 ## Plugin Installation ##
 
@@ -47,6 +48,8 @@ For the gallery template:
 `NextGEN Gallery > Gallery Settings > Basic Thumbnails > Select View`
 
 In the dropdown select `custom/justifiedgallery-view.php`
+
+If needed edit class-ppv-ngg-public.php with pages to load justified gallery CSS and JS
 
 ## Lightbox Setup ##
 
@@ -91,3 +94,6 @@ In the ppv-ngg.php file after the comment block that starts with `Currently plug
 ### 1.0.2 ###
 * Change to not copy ppv-ngg.zip to plugin directory
 * Change to use minified JS and CSS
+
+### 1.1.0 ###
+* Only load Justified Gallery CSS and JS on specified pages

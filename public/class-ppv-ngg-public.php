@@ -77,7 +77,10 @@ class Ppv_Ngg_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->justifiedstyles, PPV_NGG_PLUGIN_URL . 'assets/css/justifiedGallery-custom.min.css', array(), $this->version, 'all' );
+		// Only load Justified Gallery CSS on specified pages
+		if (is_page(['gallery', 'galleries', 'picture-galleries', 'picture-albums'])) {
+			wp_enqueue_style( $this->justifiedstyles, PPV_NGG_PLUGIN_URL . 'assets/css/justifiedGallery-custom.min.css', array(), $this->version, 'all' );
+		}
 		wp_enqueue_style( $this->simplelightboxstyles, PPV_NGG_PLUGIN_URL . 'assets/css/simple-lightbox-custom.min.css', array(), $this->version, 'all' );
 		wp_enqueue_style( $this->plugin_name, PPV_NGG_PLUGIN_URL . 'assets/css/ppv-ngg-main.min.css', array(), $this->version, 'all' );
 
@@ -102,7 +105,10 @@ class Ppv_Ngg_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->justifiedscripts, PPV_NGG_PLUGIN_URL . 'assets/js/jquery.justifiedGallery.min.js', array( 'jquery' ), $this->version, true );
+		// Only load Justified Gallery JS on specified pages
+		if (is_page(['gallery', 'galleries', 'picture-galleries', 'picture-albums'])) {
+			wp_enqueue_script( $this->justifiedscripts, PPV_NGG_PLUGIN_URL . 'assets/js/jquery.justifiedGallery.min.js', array( 'jquery' ), $this->version, true );
+		}
 		wp_enqueue_script( $this->simplelightboxscripts, PPV_NGG_PLUGIN_URL . 'assets/js/simple-lightbox.jquery.min.js', array( 'jquery' ), $this->version, true );
 		wp_enqueue_script( $this->plugin_name, PPV_NGG_PLUGIN_URL . 'assets/js/ppv-ngg-main.min.js', array( 'jquery' ), $this->version, true );
 
