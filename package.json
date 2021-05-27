@@ -58,6 +58,6 @@
   },
   "dependencies": {
     "justifiedGallery": "^3.8.1",
-    "simplelightbox": "^2.7.0"
+    "simplelightbox": "^2.7.2"
   }
 }

@@ -92,6 +92,10 @@ In the ppv-ngg.php file after the comment block that starts with `Currently plug
 
 == Changelog ==
 
+= 1.1.1 =
+* Update gulp plugin dependencies
+* Update simplelightbox version from 2.7.0  to 2.7.2
+
 = 1.1.0 =
 * Only load Justified Gallery CSS and JS on specified pages
 * Reverse order of changelog in readme
