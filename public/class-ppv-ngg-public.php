@@ -53,8 +53,10 @@ class Ppv_Ngg_Public {
 		$this->version = $version;
 		$this->justifiedstyles = 'justified-styles';
 		$this->justifiedscripts = 'justified-scripts';
+		$this->justifiedppv = 'justified-ppv';
 		$this->simplelightboxstyles = 'simplelightbox-styles';
 		$this->simplelightboxscripts = 'simplelightbox-scripts';
+		$this->simplelightboxppv = 'simplelightbox-ppv';
 
 	}
 
@@ -108,9 +110,13 @@ class Ppv_Ngg_Public {
 		// Only load Justified Gallery JS on specified pages
 		if (is_page(['gallery', 'galleries', 'picture-galleries', 'picture-albums'])) {
 			wp_enqueue_script( $this->justifiedscripts, PPV_NGG_PLUGIN_URL . 'assets/js/jquery.justifiedGallery.min.js', array( 'jquery' ), $this->version, true );
+			wp_enqueue_script( $this->justifiedppv, PPV_NGG_PLUGIN_URL . 'assets/js/ppv-ngg-justifiedGallery.min.js', array( 'jquery' ), $this->version, true );
 		}
 		wp_enqueue_script( $this->simplelightboxscripts, PPV_NGG_PLUGIN_URL . 'assets/js/simple-lightbox.jquery.min.js', array( 'jquery' ), $this->version, true );
-		wp_enqueue_script( $this->plugin_name, PPV_NGG_PLUGIN_URL . 'assets/js/ppv-ngg-main.min.js', array( 'jquery' ), $this->version, true );
+		wp_enqueue_script( $this->simplelightboxppv, PPV_NGG_PLUGIN_URL . 'assets/js/ppv-ngg-simple-lightbox.min.js', array( 'jquery' ), $this->version, true );
+		/** uncomment to use
+		 * wp_enqueue_script( $this->plugin_name, PPV_NGG_PLUGIN_URL . 'assets/js/ppv-ngg-main.min.js', array( 'jquery' ), $this->version, true );
+		 */
 
 	}
 
