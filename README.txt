@@ -92,6 +92,10 @@ In the ppv-ngg.php file after the comment block that starts with `Currently plug
 
 == Changelog ==
 
+= 1.1.3 =
+* Update gulp plugin dependencies
+* Update simplelightbox version from 2.7.2  to 2.8.0
+
 = 1.1.2 =
 * Create separate files for initialization of SimpleLightbox and JustifiedGallery JS
 * Do not enqueue now unused ppv-ngg-main.js
