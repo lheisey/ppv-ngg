@@ -92,6 +92,9 @@ In the ppv-ngg.php file after the comment block that starts with `Currently plug
 
 == Changelog ==
 
+= 1.2.0 =
+* Updated gulp-sass to version 5
+
 = 1.1.3 =
 * Update gulp plugin dependencies
 * Update simplelightbox version from 2.7.2  to 2.8.0
