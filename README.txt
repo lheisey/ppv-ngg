@@ -2,7 +2,7 @@
 Contributors: lheisey
 Tags: justified gallery, album, template, lightbox, nextgen
 Requires at least: 5.4.0
-Tested up to: 5.8
+Tested up to: 5.9
 Stable tag: 4.3
 Requires PHP: 5.6
 License: GPLv2 or later
@@ -91,6 +91,12 @@ In the ppv-ngg.php file after the comment block that starts with `Currently plug
 * SimpleLightbox https://github.com/andreknieriem/simplelightbox
 
 == Changelog ==
+
+= 1.2.1 =
+* Updated node-sass to version 7.0.1
+* Updated justifiedgallery-view.php to remove PHP warnings for some NGG Gallery shortcodes
+* Updated readme tested up to WordPress version 5.9
+* Update simplelightbox version from 2.8.0 to 2.10.2
 
 = 1.2.0 =
 * Updated gulp-sass to version 5
