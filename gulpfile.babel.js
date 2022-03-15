@@ -137,12 +137,6 @@ gulp.task('mainstyles', () => {
         .pipe(gulp.dest(config.styleMainDEST))
         .pipe(filter('**/*.css')) // Filtering stream to only css files.
         .pipe(browserSync.stream()) // Reloads style min if that is enqueued.
-        .pipe(
-            notify({
-                message: '\n\n✅  ===> MAIN STYLES — completed!\n',
-                onLast: true
-            })
-        );
 });
 
 /**
@@ -187,12 +181,6 @@ gulp.task('multistyles', () => {
         .pipe(gulp.dest(config.styleMultiDEST))
         .pipe(filter('**/*.css')) // Filtering stream to only css files.
         .pipe(browserSync.stream()) // Reloads style min if that is enqueued.
-        .pipe(
-            notify({
-                message: '\n\n?  ===> MULTIPLE STYLES — completed!\n',
-                onLast: true
-            })
-        );
 });
 
 /**
@@ -235,12 +223,6 @@ gulp.task('mainJS', () => {
         .pipe(uglify())
         .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
         .pipe(gulp.dest(config.jsMainDEST))
-        .pipe(
-            notify({
-                message: '\n\n✅  ===> MAIN JS — completed!\n',
-                onLast: true
-            })
-        );
 });
 
 /**
@@ -281,12 +263,6 @@ gulp.task('multiJS', () => {
         .pipe(uglify())
         .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
         .pipe(gulp.dest(config.jsMainDEST))
-        .pipe(
-            notify({
-                message: '\n\n?  ===> MULTIPLE JS — completed!\n',
-                onLast: true
-            })
-        );
 });
 
 /**
@@ -300,12 +276,6 @@ gulp.task('copyvendorJS', () => {
         .src(config.vendorJsSRC)
         // .pipe(changed(config.vendorJsDEST))
         .pipe(gulp.dest(config.vendorJsDEST))
-        .pipe(
-            notify({
-                message: '\n\n?  ===> VENDOR JS FILE COPY — completed!\n',
-                onLast: true
-            })
-        );
 });
 
 /**
@@ -319,12 +289,6 @@ gulp.task('copyPHP', () => {
         .src(config.phpSRC)
         .pipe(changed(config.phpDEST))
         .pipe(gulp.dest(config.phpDEST))
-        .pipe(
-            notify({
-                message: '\n\n?  ===> PHP copy — completed!\n',
-                onLast: true
-            })
-        );
 });
 
 /**
@@ -338,12 +302,6 @@ gulp.task('copymisc', () => {
         .src(config.miscGlob)
         .pipe(changed(config.miscDEST))
         .pipe(gulp.dest(config.miscDEST))
-        .pipe(
-            notify({
-                message: '\n\n?  ===> MISCELLANEOUS FILE COPY — completed!\n',
-                onLast: true
-            })
-        );
 });
 
 /**
