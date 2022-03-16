@@ -58,6 +58,7 @@ const plumber = require('gulp-plumber'); // Prevent pipe breaking caused by erro
 const beep = require('beepbeep');
 const zip = require('gulp-zip'); // Zip plugin or theme file.
 const changed = require('gulp-changed'); // Only pass through changed files in the stream
+const fancyLog = require('fancy-log');  // Log prefixing with a timestamp.
 
 /**
  * Custom Error Handler.
@@ -330,6 +331,7 @@ gulp.task('readme', (done) => {
  * zipName: pluginName.zip.
  */
 gulp.task('package', () => {
+    fancyLog("Packaging plugin files in a ZIP file");
     return gulp
         .src(config.zipSRC, {base: config.WPpluginFolder})
         .pipe(zip(config.zipName))

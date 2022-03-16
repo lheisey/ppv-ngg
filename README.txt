@@ -92,6 +92,10 @@ In the ppv-ngg.php file after the comment block that starts with `Currently plug
 
 == Changelog ==
 
+= 1.2.2 =
+* Removed gulp completion notifications
+* Added log message to gulp package task
+
 = 1.2.1 =
 * Updated node-sass to version 7.0.1
 * Updated justifiedgallery-view.php to remove PHP warnings for some NGG Gallery shortcodes
