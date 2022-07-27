@@ -2,7 +2,7 @@
 Contributors: lheisey
 Tags: justified gallery, album, template, lightbox, nextgen
 Requires at least: 5.4.0
-Tested up to: 5.9
+Tested up to: 6.0
 Stable tag: 4.3
 Requires PHP: 5.6
 License: GPLv2 or later
@@ -91,6 +91,10 @@ In the ppv-ngg.php file after the comment block that starts with `Currently plug
 * SimpleLightbox https://github.com/andreknieriem/simplelightbox
 
 == Changelog ==
+= 1.2.3 =
+* Updated readme tested up to WordPress version 6.0
+* Updated gulp plugin dependencies
+* Updated simplelightbox version from 2.10.2 to 2.10.3
 
 = 1.2.2 =
 * Removed gulp completion notifications
