@@ -1,6 +1,10 @@
 # Notes for PPV NextGEN Addons #
 
-## Reason simplelightbox version was fixed to 2.10.4 ##
+## Update for plugin version 1.2.5 ##
+
+This problem is no longer present in simplelightbox version 2.14.2 so simplelightbox is allowed to be updated during node installation and updating again.
+
+## Reason simplelightbox version was fixed to 2.10.4 (plugin version 1.2.4) ##
 
 Version 2.11.0 of simplelightbox introduced a breaking change because of the HTML/CSS used in the PPV NextGEN Addons plugin. The error manifests as the simplelightbox arrows and close buttons not responding to clicks. An example of the error message is:
 

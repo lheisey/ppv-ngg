@@ -84,6 +84,12 @@ In the ppv-ngg.php file after the comment block that starts with `Currently plug
 
 ## Changelog ##
 
+### 1.2.5 ###
+* Updated simplelightbox version to 2.14.2
+* Updated NOTES.md file
+* Updated readme tested up to WordPress version 6.3 and Requires at least to 5.5.4 
+* Updated gulp plugin dependencies
+
 ### 1.2.4 ###
 * Updated and fixed simplelightbox version to 2.10.4
 * Added NOTES.md file
